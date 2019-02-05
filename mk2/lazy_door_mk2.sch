@@ -60,17 +60,6 @@ Wire Wire Line
 Wire Wire Line
 	1250 1100 1500 1100
 $Comp
-L Device:C_Small C1
-U 1 1 5C094EFE
-P 2650 1000
-F 0 "C1" H 2742 1046 50  0000 L CNN
-F 1 "C_Small" H 2742 955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_2225_5664Metric_Pad1.80x6.60mm_HandSolder" H 2650 1000 50  0001 C CNN
-F 3 "~" H 2650 1000 50  0001 C CNN
-	1    2650 1000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C2
 U 1 1 5C094F52
 P 3150 1000
@@ -81,16 +70,6 @@ F 3 "~" H 3150 1000 50  0001 C CNN
 	1    3150 1000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2300 1100 2650 1100
-Wire Wire Line
-	2650 1100 3150 1100
-Connection ~ 2650 1100
-Wire Wire Line
-	2300 900  2650 900 
-Wire Wire Line
-	3150 900  2650 900 
-Connection ~ 2650 900 
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 5C0950D9
@@ -115,7 +94,6 @@ F 3 "" H 3150 1200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3150 900  3150 800 
-Connection ~ 3150 900 
 Wire Wire Line
 	3150 1200 3150 1100
 Connection ~ 3150 1100
@@ -654,9 +632,9 @@ Wire Wire Line
 	1050 2200 1250 2200
 Wire Wire Line
 	1200 3750 1050 3750
-Text GLabel 8800 2550 2    50   Input ~ 0
-SWITCH_1
 Text GLabel 8800 2650 2    50   Input ~ 0
+SWITCH_1
+Text GLabel 8800 2550 2    50   Input ~ 0
 SWITCH_2
 Wire Wire Line
 	8800 2550 8400 2550
@@ -710,4 +688,26 @@ NoConn ~ 7200 2750
 NoConn ~ 7200 2650
 NoConn ~ 7200 2550
 NoConn ~ 7200 2350
+Wire Wire Line
+	2300 1100 3150 1100
+$Comp
+L Device:L_Small L1
+U 1 1 5C5A0EAB
+P 2600 900
+F 0 "L1" V 2785 900 50  0000 C CNN
+F 1 "L_Small" V 2694 900 50  0000 C CNN
+F 2 "Inductor_SMD:L_2816_7142Metric_Pad3.20x4.45mm_HandSolder" H 2600 900 50  0001 C CNN
+F 3 "~" H 2600 900 50  0001 C CNN
+	1    2600 900 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2300 900  2500 900 
+Connection ~ 3150 900 
+Wire Wire Line
+	2700 900  3150 900 
+Text Label 8550 2850 0    50   ~ 0
+GPIO15
+Text Label 8500 2150 0    50   ~ 0
+GPIO2
 $EndSCHEMATC
