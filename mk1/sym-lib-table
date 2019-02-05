@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name linkit_7697)(type Legacy)(uri /home/carlo/Documents/lazy_door/lazy_door/linkit_7697.lib)(options "")(descr ""))
+  (lib (name lazy_door-rescue)(type Legacy)(uri ${KIPRJMOD}/lazy_door-rescue.lib)(options "")(descr ""))
+)

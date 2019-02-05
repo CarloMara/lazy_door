@@ -1,0 +1,658 @@
+EESchema Schematic File Version 4
+LIBS:lazy_door-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L linkit_7697:linkit7697 U1
+U 1 1 5BB25D9B
+P 4750 4150
+F 0 "U1" H 4750 5465 50  0000 C CNN
+F 1 "linkit7697" H 4750 5374 50  0000 C CNN
+F 2 "Module:LINKIT_7697" H 4750 5500 50  0001 C CNN
+F 3 "" H 4750 5500 50  0001 C CNN
+	1    4750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5BB262BF
+P 1450 1100
+F 0 "SW1" H 1450 1385 50  0000 C CNN
+F 1 "EINT_2" H 1450 1294 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 1450 1300 50  0001 C CNN
+F 3 "" H 1450 1300 50  0001 C CNN
+	1    1450 1100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5BB264E3
+P 1450 1500
+F 0 "SW2" H 1450 1785 50  0000 C CNN
+F 1 "EINT_0" H 1450 1694 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 1450 1700 50  0001 C CNN
+F 3 "" H 1450 1700 50  0001 C CNN
+	1    1450 1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW3
+U 1 1 5BB2655C
+P 1450 1900
+F 0 "SW3" H 1450 2185 50  0000 C CNN
+F 1 "EINT_22" H 1450 2094 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS645" H 1450 2100 50  0001 C CNN
+F 3 "" H 1450 2100 50  0001 C CNN
+	1    1450 1900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5BB265E1
+P 1000 2050
+F 0 "#PWR01" H 1000 1800 50  0001 C CNN
+F 1 "GND" H 1005 1877 50  0000 C CNN
+F 2 "" H 1000 2050 50  0001 C CNN
+F 3 "" H 1000 2050 50  0001 C CNN
+	1    1000 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1900 1250 1900
+Wire Wire Line
+	1250 1500 1000 1500
+Wire Wire Line
+	1000 1500 1000 1900
+Connection ~ 1000 1900
+Wire Wire Line
+	1250 1100 1000 1100
+Wire Wire Line
+	1000 1100 1000 1500
+Connection ~ 1000 1500
+$Comp
+L Device:LED_CRGB D1
+U 1 1 5BB26A3E
+P 1450 4500
+F 0 "D1" H 1450 4997 50  0000 C CNN
+F 1 "LED_CRGB" H 1450 4906 50  0000 C CNN
+F 2 "LED_SMD:LED_RGB_5050-6" H 1450 4450 50  0001 C CNN
+F 3 "~" H 1450 4450 50  0001 C CNN
+	1    1450 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 2050 1000 1900
+$Comp
+L power:GND #PWR02
+U 1 1 5BB2924A
+P 1000 4900
+F 0 "#PWR02" H 1000 4650 50  0001 C CNN
+F 1 "GND" H 1005 4727 50  0000 C CNN
+F 2 "" H 1000 4900 50  0001 C CNN
+F 3 "" H 1000 4900 50  0001 C CNN
+	1    1000 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 4500 1000 4500
+Wire Wire Line
+	1000 4500 1000 4900
+Wire Wire Line
+	4050 3800 2800 3800
+Wire Wire Line
+	2800 3800 2800 1900
+Wire Wire Line
+	2800 1900 1650 1900
+Wire Wire Line
+	4050 3700 2900 3700
+Wire Wire Line
+	2900 3700 2900 1500
+Wire Wire Line
+	2900 1500 1650 1500
+Wire Wire Line
+	1650 1100 3000 1100
+Wire Wire Line
+	3000 1100 3000 3600
+Wire Wire Line
+	3000 3600 4050 3600
+Wire Wire Line
+	4050 3500 2400 3500
+Wire Wire Line
+	2400 3500 2400 4300
+Wire Wire Line
+	2400 4300 1650 4300
+Wire Wire Line
+	4050 3900 2500 3900
+Wire Wire Line
+	2500 3900 2500 4500
+Wire Wire Line
+	2500 4500 1650 4500
+Wire Wire Line
+	4050 4000 2600 4000
+Wire Wire Line
+	2600 4000 2600 4700
+Wire Wire Line
+	2600 4700 1650 4700
+Text Label 3300 3600 0    50   ~ 0
+EINT2
+Text Label 3300 3700 0    50   ~ 0
+EINT0
+Text Label 3300 3800 0    50   ~ 0
+EINT22
+Text Label 3050 3500 0    50   ~ 0
+LED_R
+Text Label 3050 3900 0    50   ~ 0
+LED_G
+Text Label 3050 4000 0    50   ~ 0
+LED_B
+$Comp
+L Converter_ACDC:IRM-03-3.3S PS1
+U 1 1 5BB2B281
+P 9150 1100
+F 0 "PS1" H 9150 1467 50  0000 C CNN
+F 1 "IRM-03-3.3S" H 9150 1376 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_MeanWell_IRM-03-xx_SMD" H 9150 800 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/260/IRM-03-spec-881203.pdf" H 9150 700 50  0001 C CNN
+	1    9150 1100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5BB2B74F
+P 10450 1050
+F 0 "J2" H 10530 1042 50  0000 L CNN
+F 1 "AC_IN" H 10530 951 50  0000 L CNN
+F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G_1x02_P5.00mm_Horizontal" H 10450 1050 50  0001 C CNN
+F 3 "~" H 10450 1050 50  0001 C CNN
+	1    10450 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x02_Counter_Clockwise J1
+U 1 1 5BB2C10E
+P 7900 1050
+F 0 "J1" H 7950 1267 50  0000 C CNN
+F 1 "AC_POWER_SELECTOR" H 7950 1176 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 7900 1050 50  0001 C CNN
+F 3 "~" H 7900 1050 50  0001 C CNN
+	1    7900 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1050 7350 1050
+Wire Wire Line
+	7350 1050 7350 800 
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5BB2D3F8
+P 7350 800
+F 0 "#PWR05" H 7350 650 50  0001 C CNN
+F 1 "+3.3V" H 7365 973 50  0000 C CNN
+F 2 "" H 7350 800 50  0001 C CNN
+F 3 "" H 7350 800 50  0001 C CNN
+	1    7350 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5BB2D4F8
+P 7350 1300
+F 0 "#PWR06" H 7350 1050 50  0001 C CNN
+F 1 "GND" H 7355 1127 50  0000 C CNN
+F 2 "" H 7350 1300 50  0001 C CNN
+F 3 "" H 7350 1300 50  0001 C CNN
+	1    7350 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1150 7350 1150
+Wire Wire Line
+	7350 1150 7350 1300
+Wire Wire Line
+	8200 1050 8350 1050
+Wire Wire Line
+	8350 1050 8350 1000
+Wire Wire Line
+	8350 1000 8750 1000
+Wire Wire Line
+	8750 1200 8350 1200
+Wire Wire Line
+	8350 1200 8350 1150
+Wire Wire Line
+	8350 1150 8200 1150
+Wire Wire Line
+	5450 3400 5600 3400
+Wire Wire Line
+	5600 3400 5600 3100
+$Comp
+L power:+3.3V #PWR04
+U 1 1 5BB33463
+P 5600 3100
+F 0 "#PWR04" H 5600 2950 50  0001 C CNN
+F 1 "+3.3V" H 5615 3273 50  0000 C CNN
+F 2 "" H 5600 3100 50  0001 C CNN
+F 3 "" H 5600 3100 50  0001 C CNN
+	1    5600 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4700 3800 4700
+Wire Wire Line
+	3800 4700 3800 4900
+$Comp
+L power:GND #PWR03
+U 1 1 5BB33C60
+P 3800 4900
+F 0 "#PWR03" H 3800 4650 50  0001 C CNN
+F 1 "GND" H 3805 4727 50  0000 C CNN
+F 2 "" H 3800 4900 50  0001 C CNN
+F 3 "" H 3800 4900 50  0001 C CNN
+	1    3800 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_SolidState:MOC3042M U2
+U 1 1 5BB34CED
+P 7950 3900
+F 0 "U2" H 7950 4225 50  0000 C CNN
+F 1 "MOC3042M" H 7950 4134 50  0000 C CNN
+F 2 "Package_SO:MOC3042M" H 7750 3700 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3031M.pdf" H 7915 3900 50  0001 L CNN
+	1    7950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BB38060
+P 7200 3800
+F 0 "R1" V 6993 3800 50  0000 C CNN
+F 1 "HP_1_BIAS" V 7100 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7130 3800 50  0001 C CNN
+F 3 "~" H 7200 3800 50  0001 C CNN
+	1    7200 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 3800 7650 3800
+$Comp
+L power:GND #PWR07
+U 1 1 5BB3B356
+P 7600 4100
+F 0 "#PWR07" H 7600 3850 50  0001 C CNN
+F 1 "GND" H 7605 3927 50  0000 C CNN
+F 2 "" H 7600 4100 50  0001 C CNN
+F 3 "" H 7600 4100 50  0001 C CNN
+	1    7600 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 4000 7600 4000
+Wire Wire Line
+	7600 4000 7600 4100
+$Comp
+L Device:R R3
+U 1 1 5BB3FE71
+P 8550 3800
+F 0 "R3" V 8343 3800 50  0000 C CNN
+F 1 "360" V 8434 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8480 3800 50  0001 C CNN
+F 3 "~" H 8550 3800 50  0001 C CNN
+	1    8550 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Triac_Thyristor:Z0110MN D2
+U 1 1 5BB40D5B
+P 9050 4150
+F 0 "D2" H 9179 4196 50  0000 L CNN
+F 1 "Z0110MN" H 9179 4105 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 9800 4000 50  0001 C CNN
+F 3 "http://www.st.com/resource/en/datasheet/z01.pdf" H 9200 4450 50  0001 C CNN
+	1    9050 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 3800 9050 3800
+Wire Wire Line
+	8400 3800 8250 3800
+$Comp
+L Device:R R4
+U 1 1 5BB450A6
+P 8550 4250
+F 0 "R4" H 8620 4296 50  0000 L CNN
+F 1 "330" H 8620 4205 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8480 4250 50  0001 C CNN
+F 3 "~" H 8550 4250 50  0001 C CNN
+	1    8550 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 4300 9050 4550
+Wire Wire Line
+	9050 4550 8550 4550
+Wire Wire Line
+	9050 3800 9050 4000
+Wire Wire Line
+	8550 4400 8550 4550
+Wire Wire Line
+	8250 4000 8550 4000
+Wire Wire Line
+	8550 4000 8550 4100
+Wire Wire Line
+	8900 4250 8800 4250
+Wire Wire Line
+	8800 4250 8800 4000
+Wire Wire Line
+	8800 4000 8550 4000
+Connection ~ 8550 4000
+$Comp
+L Device:R R7
+U 1 1 5BB51EA5
+P 9650 4000
+F 0 "R7" H 9720 4046 50  0000 L CNN
+F 1 "39" H 9720 3955 50  0000 L CNN
+F 2 "" V 9580 4000 50  0001 C CNN
+F 3 "~" H 9650 4000 50  0001 C CNN
+	1    9650 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5BB51F4C
+P 9650 4400
+F 0 "C1" H 9742 4446 50  0000 L CNN
+F 1 "0.1" H 9742 4355 50  0000 L CNN
+F 2 "" H 9650 4400 50  0001 C CNN
+F 3 "~" H 9650 4400 50  0001 C CNN
+	1    9650 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 4550 9650 4550
+Wire Wire Line
+	9650 4550 9650 4500
+Connection ~ 9050 4550
+Wire Wire Line
+	9650 4150 9650 4300
+Wire Wire Line
+	9650 3850 9650 3800
+Wire Wire Line
+	9650 3800 9050 3800
+Connection ~ 9050 3800
+Wire Wire Line
+	9650 3800 10100 3800
+Wire Wire Line
+	10100 3800 10100 4100
+Connection ~ 9650 3800
+Wire Wire Line
+	9650 4550 10100 4550
+Wire Wire Line
+	10100 4550 10100 4200
+Connection ~ 9650 4550
+$Comp
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 5BB5FD75
+P 10450 4200
+F 0 "J3" H 10529 4100 50  0000 L CNN
+F 1 "HP_1_LOAD" H 10529 4191 50  0000 L CNN
+F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G_1x02_P5.00mm_Horizontal" H 10450 4200 50  0001 C CNN
+F 3 "~" H 10450 4200 50  0001 C CNN
+	1    10450 4200
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	10100 4200 10250 4200
+Wire Wire Line
+	10100 4100 10250 4100
+Wire Wire Line
+	10250 1050 9950 1050
+Wire Wire Line
+	9950 1050 9950 1000
+Wire Wire Line
+	9950 1000 9550 1000
+Wire Wire Line
+	9550 1200 9950 1200
+Wire Wire Line
+	9950 1200 9950 1150
+Wire Wire Line
+	9950 1150 10250 1150
+$Comp
+L Relay_SolidState:MOC3042M U3
+U 1 1 5BB71A6D
+P 7950 2500
+F 0 "U3" H 7950 2825 50  0000 C CNN
+F 1 "MOC3042M" H 7950 2734 50  0000 C CNN
+F 2 "Package_SO:MOC3042M" H 7750 2300 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3031M.pdf" H 7915 2500 50  0001 L CNN
+	1    7950 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BB71A74
+P 7200 2400
+F 0 "R2" V 6993 2400 50  0000 C CNN
+F 1 "HP_2_BIAS" V 7100 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7130 2400 50  0001 C CNN
+F 3 "~" H 7200 2400 50  0001 C CNN
+	1    7200 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7350 2400 7650 2400
+$Comp
+L power:GND #PWR08
+U 1 1 5BB71A7C
+P 7600 2700
+F 0 "#PWR08" H 7600 2450 50  0001 C CNN
+F 1 "GND" H 7605 2527 50  0000 C CNN
+F 2 "" H 7600 2700 50  0001 C CNN
+F 3 "" H 7600 2700 50  0001 C CNN
+	1    7600 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2600 7600 2600
+Wire Wire Line
+	7600 2600 7600 2700
+$Comp
+L Device:R R5
+U 1 1 5BB71A84
+P 8550 2400
+F 0 "R5" V 8343 2400 50  0000 C CNN
+F 1 "360" V 8434 2400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8480 2400 50  0001 C CNN
+F 3 "~" H 8550 2400 50  0001 C CNN
+	1    8550 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Triac_Thyristor:Z0110MN D3
+U 1 1 5BB71A8B
+P 9050 2750
+F 0 "D3" H 9179 2796 50  0000 L CNN
+F 1 "Z0110MN" H 9179 2705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 9800 2600 50  0001 C CNN
+F 3 "http://www.st.com/resource/en/datasheet/z01.pdf" H 9200 3050 50  0001 C CNN
+	1    9050 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 2400 9050 2400
+Wire Wire Line
+	8400 2400 8250 2400
+$Comp
+L Device:R R6
+U 1 1 5BB71A94
+P 8550 2850
+F 0 "R6" H 8620 2896 50  0000 L CNN
+F 1 "330" H 8620 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8480 2850 50  0001 C CNN
+F 3 "~" H 8550 2850 50  0001 C CNN
+	1    8550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 2900 9050 3150
+Wire Wire Line
+	9050 3150 8550 3150
+Wire Wire Line
+	9050 2400 9050 2600
+Wire Wire Line
+	8550 3000 8550 3150
+Wire Wire Line
+	8250 2600 8550 2600
+Wire Wire Line
+	8550 2600 8550 2700
+Wire Wire Line
+	8900 2850 8800 2850
+Wire Wire Line
+	8800 2850 8800 2600
+Wire Wire Line
+	8800 2600 8550 2600
+Connection ~ 8550 2600
+$Comp
+L Device:R R8
+U 1 1 5BB71AA5
+P 9650 2600
+F 0 "R8" H 9720 2646 50  0000 L CNN
+F 1 "39" H 9720 2555 50  0000 L CNN
+F 2 "" V 9580 2600 50  0001 C CNN
+F 3 "~" H 9650 2600 50  0001 C CNN
+	1    9650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5BB71AAC
+P 9650 3000
+F 0 "C2" H 9742 3046 50  0000 L CNN
+F 1 "0.1" H 9742 2955 50  0000 L CNN
+F 2 "" H 9650 3000 50  0001 C CNN
+F 3 "~" H 9650 3000 50  0001 C CNN
+	1    9650 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3150 9650 3150
+Wire Wire Line
+	9650 3150 9650 3100
+Connection ~ 9050 3150
+Wire Wire Line
+	9650 2750 9650 2900
+Wire Wire Line
+	9650 2450 9650 2400
+Wire Wire Line
+	9650 2400 9050 2400
+Connection ~ 9050 2400
+Wire Wire Line
+	9650 2400 10100 2400
+Wire Wire Line
+	10100 2400 10100 2700
+Connection ~ 9650 2400
+Wire Wire Line
+	9650 3150 10100 3150
+Wire Wire Line
+	10100 3150 10100 2800
+Connection ~ 9650 3150
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 5BB71AC0
+P 10450 2800
+F 0 "J4" H 10530 2792 50  0000 L CNN
+F 1 "HP_2_LOAD" H 10530 2701 50  0000 L CNN
+F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G_1x02_P5.00mm_Horizontal" H 10450 2800 50  0001 C CNN
+F 3 "~" H 10450 2800 50  0001 C CNN
+	1    10450 2800
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	10100 2800 10250 2800
+Wire Wire Line
+	10100 2700 10250 2700
+Text Notes 10400 950  0    50   ~ 0
+Phoenix Contact\n1935161
+Text Notes 10400 4000 0    50   ~ 0
+Phoenix Contact\n1935161
+Text Notes 10400 2600 0    50   ~ 0
+Phoenix Contact\n1935161
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5BB2B763
+P 1700 6550
+F 0 "H1" H 1800 6596 50  0000 L CNN
+F 1 "MountingHole" H 1800 6505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1700 6550 50  0001 C CNN
+F 3 "~" H 1700 6550 50  0001 C CNN
+	1    1700 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5BB2B9A2
+P 2500 6550
+F 0 "H3" H 2600 6596 50  0000 L CNN
+F 1 "MountingHole" H 2600 6505 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 2500 6550 50  0001 C CNN
+F 3 "~" H 2500 6550 50  0001 C CNN
+	1    2500 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5BB2BA38
+P 1700 6850
+F 0 "H2" H 1800 6896 50  0000 L CNN
+F 1 "MountingHole" H 1800 6805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 1700 6850 50  0001 C CNN
+F 3 "~" H 1700 6850 50  0001 C CNN
+	1    1700 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5BB2BB74
+P 2500 6850
+F 0 "H4" H 2600 6896 50  0000 L CNN
+F 1 "MountingHole" H 2600 6805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad" H 2500 6850 50  0001 C CNN
+F 3 "~" H 2500 6850 50  0001 C CNN
+	1    2500 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5BB2F832
+P 3750 4250
+F 0 "#PWR0101" H 3750 4100 50  0001 C CNN
+F 1 "+3.3V" H 3765 4423 50  0000 C CNN
+F 2 "" H 3750 4250 50  0001 C CNN
+F 3 "" H 3750 4250 50  0001 C CNN
+	1    3750 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4300 3750 4300
+Wire Wire Line
+	3750 4300 3750 4250
+Wire Wire Line
+	5450 3800 7050 3800
+Wire Wire Line
+	5450 3700 6300 3700
+Wire Wire Line
+	6300 3700 6300 2400
+Wire Wire Line
+	6300 2400 7050 2400
+$EndSCHEMATC
