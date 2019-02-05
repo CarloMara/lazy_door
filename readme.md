@@ -18,3 +18,7 @@ Inspiration for the power side was drawn from both the datasheets and several bo
 This board shares the sames design principles as the mk1 version, with the only exception of the microcontroller, which was changed in favor of an esp8266, as it's more readily available.
 
 ![Alt text](https://raw.githubusercontent.com/CarloMara/lazy_door/master/mk2/img/sch.svg?sanitize=true)
+
+![Alt text](https://raw.githubusercontent.com/CarloMara/lazy_door/master/mk2/img/pcb.svg?sanitize=true)
+
+![Alt text](https://raw.githubusercontent.com/CarloMara/lazy_door/master/mk2/img/3d.png)
