@@ -19,6 +19,6 @@ This board shares the sames design principles as the mk1 version, with the only 
 
 ![Alt text](https://raw.githubusercontent.com/CarloMara/lazy_door/master/mk2/img/sch.svg?sanitize=true)
 
-![Alt text](https://raw.githubusercontent.com/CarloMara/lazy_door/master/mk2/img/pcb.svg?sanitize=true)
+![Alt text](https://raw.githubusercontent.com/CarloMara/lazy_door/master/mk2/img/pcb_compact.svg?sanitize=true)
 
-![Alt text](https://raw.githubusercontent.com/CarloMara/lazy_door/master/mk2/img/3d.png)
+![Alt text](https://raw.githubusercontent.com/CarloMara/lazy_door/master/mk2/img/3d_compact.png)
